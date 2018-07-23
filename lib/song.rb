@@ -10,8 +10,9 @@ class Song
   def initialize(name, artist, genre)
     @@count += 1
     
+    
     if @@genres.include?(genre)
-      @@genre_count[genre] += 1
+      @@genre_count[genre] = @@count += 1
     else 
       @@genre_count[genre] = 1 #The @@genre_count is needed before [genre] because it still needs an empty hash. You can just expect [genre] to = 1
     end
